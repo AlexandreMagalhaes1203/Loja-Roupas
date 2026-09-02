@@ -1,0 +1,10 @@
+/* ==========================================================
+   Loja de Roupas — tema inspirado na Outlet360
+   Footer
+   ========================================================== */
+
+sua-conta {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}

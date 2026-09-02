@@ -1,0 +1,286 @@
+/* ==========================================================
+   Loja de Roupas — tema inspirado na Outlet360
+   ========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --preto: #121212;
+  --preto-suave: #1c1c1c;
+  --branco: #f7f5f1;
+  --cinza: #8c8c86;
+  --cinza-claro: #d9d6cf;
+  --dourado: #b8955c;
+  --vermelho: #c1272d;
+
+  --fonte-titulo: 'Oswald', sans-serif;
+  --fonte-texto: 'Inter', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--branco);
+  color: var(--preto);
+  font-family: var(--fonte-texto);
+  margin: 0;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ---------- Cabeçalho ---------- */
+
+header {
+  background-color: var(--preto);
+  color: var(--branco);
+  padding: 28px 5vw 40px;
+}
+
+div {
+   display: flex;
+  justify-content: space-between;
+}
+
+header h1 {
+  font-family: var(--fonte-titulo);
+  font-weight: 600;
+  font-size: clamp(28px, 4vw, 44px);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0 0 4px;
+  border-left: 4px solid var(--dourado);
+  padding-left: 16px;
+}
+
+#Slogam {
+  font-family: var(--fonte-texto);
+  font-style: normal;
+  font-weight: 400;
+  color: var(--cinza-claro);
+  letter-spacing: 0.5px;
+  margin: 0 0 0 20px;
+  font-size: 15px;
+}
+
+nav {
+  margin-top: 24px;
+}
+
+nav img {
+  width: 100%;
+  max-width: 640px;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px;
+  border: 1px solid #2a2a2a;
+}
+
+nav h3 {
+  font-family: var(--fonte-titulo);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--dourado);
+  text-align: center;
+  margin: 24px 0 16px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 0;
+  margin: 0 0 28px;
+}
+
+nav ul li a {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid #333;
+  border-radius: 2px;
+  font-family: var(--fonte-titulo);
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--branco);
+  transition: border-color 0.25s ease, color 0.25s ease, background-color 0.25s ease;
+}
+
+nav ul li a:hover {
+  border-color: var(--dourado);
+  color: var(--preto);
+  background-color: var(--dourado);
+}
+
+#button-custom {
+  display: block;
+  margin: 0 auto;
+  background-color: var(--vermelho);
+  color: var(--branco);
+  padding: 14px 36px;
+  border: none;
+  border-radius: 2px;
+  font-family: var(--fonte-titulo);
+  font-size: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.25s ease, transform 0.15s ease;
+}
+
+#button-custom:hover {
+  background-color: #a01f24;
+  transform: translateY(-2px);
+}
+
+#button-custom:active {
+  transform: translateY(1px);
+}
+
+header h4 {
+  font-family: var(--fonte-titulo);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--branco);
+  border-top: 1px solid #2a2a2a;
+  padding-top: 32px;
+  margin: 40px 0 12px;
+  text-align: center;
+}
+
+#Hitoria {
+  color: var(--cinza-claro);
+  font-style: normal;
+  font-size: 14px;
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ---------- Seções masculino / feminino (iframes) ---------- */
+
+section {
+  background-color: var(--branco);
+}
+
+section h4,
+footer h4 {
+  font-family: var(--fonte-titulo);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 24px;
+  text-align: center;
+  padding: 28px 0 8px;
+  margin: 0;
+  color: var(--preto);
+}
+
+/* listas de produto dentro das páginas masculino.html / feminino.html */
+ol {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 18px;
+  padding: 12px 5vw 28px;
+  margin: 0;
+  counter-reset: item;
+}
+
+ol li {
+  font-family: var(--fonte-titulo);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 13px;
+  text-align: center;
+  color: var(--preto);
+  border-top: 1px solid var(--cinza-claro);
+  padding-top: 8px;
+}
+
+ol li a:hover {
+  color: var(--dourado);
+}
+
+ol img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border: 1px solid var(--cinza-claro);
+  filter: grayscale(15%);
+  transition: filter 0.25s ease, transform 0.25s ease;
+}
+
+ol img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.02);
+}
+
+ol br {
+  display: none; /* o grid já cuida do espaçamento */
+}
+
+/* ---------- Rodapé (rodape.html) ---------- */
+
+footer {
+  background-color: var(--preto);
+  color: var(--branco);
+}
+
+footer h4 {
+  color: var(--branco);
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  padding: 0 0 12px;
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+footer ul li a {
+  font-family: var(--fonte-titulo);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 13px;
+  color: var(--cinza-claro);
+}
+
+footer ul li a:hover {
+  color: var(--dourado);
+}
+
+footer p {
+  text-align: center;
+  font-size: 13px;
+  color: var(--cinza);
+  margin: 6px 0;
+}
+
+/* ---------- Responsivo ---------- */
+
+@media (max-width: 640px) {
+  header {
+    padding: 20px 4vw 28px;
+  }
+
+  nav ul {
+    gap: 8px;
+  }
+
+  nav ul li a {
+    padding: 8px 14px;
+    font-size: 12px;
+  }
+}
