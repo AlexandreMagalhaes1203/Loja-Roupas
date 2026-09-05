@@ -3,8 +3,102 @@
    Footer
    ========================================================== */
 
-sua-conta {
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #0d0d0d;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 60px;
+  background-color: #0d0d0d;
+  color: #fff;
+  padding: 50px 60px;
+  font-family: Arial, sans-serif;
+}
+
+footer h2 {
+  color: #999;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin: 0 0 15px 0;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/*  Sua Conta  */
+.sua-conta {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
+}
+
+.sua-conta p {
+  margin: 0;
+  font-size: 14px;
+  color: #6ea8fe;
+  cursor: pointer;
+}
+
+/*  Atendimento  */
+footer > div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+footer > div:nth-child(2) p {
+  margin: 0;
+  font-size: 14px;
+  color: #6ea8fe;
+  cursor: pointer;
+}
+
+/*  Contato  */
+.Contato {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.Contato p {
+  margin: 0;
+  font-size: 14px;
+  color: #fff;
+}
+
+.Contato strong {
+  font-weight: 700;
+}
+
+/*  Redes Sociais  */
+footer .Redes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+footer .Redes button {
+  background: none;
+  border: none;
+  color: #fff;
+  text-align: left;
+  padding: 0;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+footer > p {
+  width: 100%;
+  color: #666;
+  font-size: 13px;
+  margin-top: 30px;
 }

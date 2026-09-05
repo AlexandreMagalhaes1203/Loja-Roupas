@@ -1,0 +1,35 @@
+*{
+    outline: magenta 3px solid;
+}
+
+#Dadoslogin{
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    padding: 12px 14px;
+    font-size: 14px;
+    width: 100%;
+    gap: 20px;
+}
+input{
+    border: 1px solid #000000;
+    border-radius: 4px;
+    padding: 8px;
+    font-size: 14px;
+    width: 100%; 
+    background-color: #52454582;
+}   
+/* div> = entrar dentro do comando para mudar css*/
+div>input::placeholder{
+    color: #0f0f0f;
+}
+#telalogin{
+    background-color: #52454582;
+    border-radius: 50px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
