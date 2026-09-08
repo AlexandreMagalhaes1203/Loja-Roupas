@@ -68,6 +68,74 @@ header h1 {
   font-size: 15px;
 }
 
+/* ---------- Menu de usuário (avatar) ---------- */
+
+.user-menu {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.user-icon-btn {
+  background: transparent;
+  border: 1px solid #3a3a3a;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  color: var(--branco);
+  transition: border-color 0.25s ease, color 0.25s ease;
+}
+
+.user-icon-btn:hover {
+  border-color: var(--dourado);
+  color: var(--dourado);
+}
+
+.user-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background-color: var(--preto-suave);
+  border: 1px solid #2a2a2a;
+  border-radius: 4px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  min-width: 160px;
+  padding: 6px 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+}
+
+.user-menu:hover .user-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.user-dropdown a {
+  display: block;
+  width: 100%;
+  padding: 10px 18px;
+  font-family: var(--fonte-titulo);
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--cinza-claro);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.user-dropdown a:hover {
+  background-color: var(--preto);
+  color: var(--dourado);
+}
+
 nav {
   margin-top: 24px;
 }
