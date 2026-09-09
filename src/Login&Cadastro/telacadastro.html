@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/src/Login&Cadastro/telacadastro.css">
+    <title>Telacadastro</title>
+</head>
+
+<body>
+    <div id="pagina">
+        <div id="cabecalho-login">
+            <h1>Bem vindo a Zune Store</h1>
+            <p>Faça cadastro para continuar</p>
+        </div>
+        <div id="telacadastro">
+            <h2>Cadastro</h2>
+            <form action="Cadastro" onsubmit="return validarSenhas()">
+                <div id="dadoscadastro">
+                    <input type="text" name="Nome" placeholder="Nome">
+                    <input type="text" name="Nome de Usuario" placeholder="Nome de Usuario">
+                    <input type="text" name="Email" placeholder="Email">
+                    <input type="password" id="senha" name="Senha" placeholder="Senha">
+                    <input type="password" id="confirmarSenha" name="Confirmar Senha" placeholder="Confirmar Senha">
+                    <span id="mensagemErro" style="color: red; display: none;">As senhas não coincidem!</span>
+                    <button type="submit">Cadastrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        /* JAVASCRIPT FEITO COM IA*/
+        function validarSenhas() {
+            const senha = document.getElementById("senha").value;
+            const confirmarSenha = document.getElementById("confirmarSenha").value;
+            const mensagemErro = document.getElementById("mensagemErro");
+
+            if (senha !== confirmarSenha) {
+                mensagemErro.style.display = "block";
+                return false; // impede o envio do formulário
+            }
+
+            mensagemErro.style.display = "none";
+            return true; // permite o envio
+        }
+    </script>
+</body>
+
+</html>
