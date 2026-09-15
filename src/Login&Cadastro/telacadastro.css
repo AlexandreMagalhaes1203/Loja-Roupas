@@ -102,6 +102,13 @@ input:focus {
   border-color: var(--dourado);
 }
 
+label {
+  display: block;
+  font-size: 14px;
+  color: var(--branco);
+  margin-bottom: 4px;
+}
+
 #mensagemErro {
   color: var(--erro);
   font-size: 13px;

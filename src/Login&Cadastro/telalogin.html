@@ -5,12 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="telalogincss.css">
     <title>Login</title>
 </head>
 
 <body>
+
+    
 
     <div id="telalogin">
         <div id="cabecalho-login">
@@ -22,8 +26,14 @@
             <h2>Login</h2>
             <form action="Login">
                 <div id="Dadoslogin">
-                    <input type="text" name="Email" placeholder="Email">
-                    <input type="password" name="Senha" placeholder="Senha">
+                    <div>
+                        <label  for="email">Email:</label>
+                        <input type="text" id="email" name="Email" placeholder="Email">
+                    </div>
+                    <div>
+                        <label for="senha">Senha:</label>
+                        <input type="password" id="senha" name="Senha" placeholder="Senha">
+                    </div>
                 </div>
                 <div>
                     <button type="submit">Login</button>

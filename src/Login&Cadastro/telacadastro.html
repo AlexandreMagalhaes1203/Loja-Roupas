@@ -12,6 +12,8 @@
     <title>Telacadastro</title>
 </head>
 
+    <a href="/src/Main/interface.html"></a>
+
 <body>
     <div id="pagina">
         <div id="cabecalho-login">
@@ -22,20 +24,30 @@
             <h2>Cadastro</h2>
             <form action="Cadastro" onsubmit="return validarSenhas()">
                 <div id="dadoscadastro">
-                    <label for="nome">Nome:</label>
-                    <input type="text" id="nome" name="Nome" placeholder="Nome">
+                    <div>
+                        
+                        <input type="text" id="nome" name="Nome" placeholder="Nome">
+                    </div>
 
-                    <label for="nomeUsuario">Nome de Usuário:</label>
-                    <input type="text" id="nomeUsuario" name="nomeUsuario" placeholder="Nome de Usuario">
+                    <div>
+                        <label for="nomeUsuario">Nome de Usuário:</label>
+                        <input type="text" id="nomeUsuario" name="nomeUsuario" placeholder="Nome de Usuario">
+                    </div>
 
-                    <label for="email">Email:</label>
-                    <input type="text" id="email" name="Email" placeholder="Email">
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="text" id="email" name="Email" placeholder="Email">
+                    </div>
 
-                    <label for="senha">Senha:</label>
-                    <input type="password" id="senha" name="Senha" placeholder="Senha">
+                    <div>
+                        <label for="senha">Senha:</label>
+                        <input type="password" id="senha" name="Senha" placeholder="Senha">
+                    </div>
 
-                    <label for="confirmarSenha">Confirmar Senha:</label>
-                    <input type="password" id="confirmarSenha" name="Confirmar Senha" placeholder="Confirmar Senha">
+                    <div>
+                        <label for="confirmarSenha">Confirmar Senha:</label>
+                        <input type="password" id="confirmarSenha" name="Confirmar Senha" placeholder="Confirmar Senha">
+                    </div>
 
                     <span id="mensagemErro" style="color: red; display: none;">As senhas não coincidem!</span>
                     <button type="submit">Cadastrar</button>

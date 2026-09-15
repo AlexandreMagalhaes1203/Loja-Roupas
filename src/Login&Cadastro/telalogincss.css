@@ -118,6 +118,13 @@ button[type="submit"] {
   transition: background-color 0.25s ease, transform 0.15s ease;
 }
 
+label {
+  display: block;
+  font-size: 14px;
+  color: var(--branco);
+  margin-bottom: 4px;
+}
+
 button[type="submit"]:hover {
   background-color: #a17f4a;
   transform: translateY(-2px);
