@@ -22,11 +22,21 @@
             <h2>Cadastro</h2>
             <form action="Cadastro" onsubmit="return validarSenhas()">
                 <div id="dadoscadastro">
-                    <input type="text" name="Nome" placeholder="Nome">
-                    <input type="text" name="Nome de Usuario" placeholder="Nome de Usuario">
-                    <input type="text" name="Email" placeholder="Email">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="Nome" placeholder="Nome">
+
+                    <label for="nomeUsuario">Nome de Usuário:</label>
+                    <input type="text" id="nomeUsuario" name="nomeUsuario" placeholder="Nome de Usuario">
+
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="Email" placeholder="Email">
+
+                    <label for="senha">Senha:</label>
                     <input type="password" id="senha" name="Senha" placeholder="Senha">
+
+                    <label for="confirmarSenha">Confirmar Senha:</label>
                     <input type="password" id="confirmarSenha" name="Confirmar Senha" placeholder="Confirmar Senha">
+
                     <span id="mensagemErro" style="color: red; display: none;">As senhas não coincidem!</span>
                     <button type="submit">Cadastrar</button>
                 </div>
