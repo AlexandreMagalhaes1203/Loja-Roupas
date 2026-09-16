@@ -1,5 +1,136 @@
-header {
-  background-color: var(--preto);
-  color: var(--branco);
-  padding: 28px 5vw 40px;
+/* ==========================================================
+   Loja de Roupas — CSS exclusivo de masculino.html
+   ========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+    --preto: #121212;
+    --preto-suave: #1c1c1c;
+    --branco: #f7f5f1;
+    --cinza: #8c8c86;
+    --cinza-claro: #d9d6cf;
+    --dourado: #b8955c;
+    --vermelho: #c1272d;
+
+    --fonte-titulo: 'Oswald', sans-serif;
+    --fonte-texto: 'Inter', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Esse arquivo só é usado por masculino.html (dentro do iframe), então
+   dar um fundo escuro ao body aqui não afeta o resto do site. */
+body {
+    background-color: var(--preto);
+    color: var(--branco);
+    font-family: var(--fonte-texto);
+    margin: 0;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Título "Masculino" no topo da página */
+h4 {
+    font-family: var(--fonte-titulo);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 20px;
+    color: var(--branco);
+    padding: 20px 5vw 0;
+    margin: 0;
+}
+
+/* ---------- Carrossel Masculino ---------- */
+
+.Carrossel.Masculino {
+    background-color: var(--preto);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px 5vw;
+}
+
+.Rolamento.Masculino {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.Rolamento.Masculino::-webkit-scrollbar {
+    display: none;
+}
+
+.Rolamento.Masculino>div {
+    position: relative;
+    flex: 0 0 220px;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+}
+
+.Rolamento.Masculino img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    display: block;
+    border: 1px solid var(--cinza-claro);
+    filter: grayscale(100%);
+}
+
+.Rolamento.Masculino a {
+    display: block;
+    margin-top: 12px;
+    background-color: transparent;
+    border: 1px solid var(--cinza-claro);
+    padding: 14px 8px;
+    font-family: var(--fonte-titulo);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 12px;
+    text-align: center;
+    color: var(--branco);
+    transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
+.Rolamento.Masculino a:hover {
+    background-color: var(--dourado);
+    border-color: var(--dourado);
+    color: var(--preto);
+}
+
+/* Setas: coladas na imagem do primeiro/último card */
+
+.Seta {
+    position: absolute;
+    top: 38%;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--branco);
+    cursor: pointer;
+    z-index: 2;
+    transition: background-color 0.25s ease;
+}
+
+.Seta:hover {
+    background-color: var(--dourado);
+}
+
+.esquerda {
+    left: 10px;
+}
+
+.direita {
+    right: 10px;
 }

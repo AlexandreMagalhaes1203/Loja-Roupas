@@ -2,6 +2,15 @@
    Loja de Roupas — tema inspirado na Outlet360
    ========================================================== */
 
+
+/*
+   {
+border :outline 2px solid magenta
+}
+
+Comando para deixar todas as divs com borda visivel
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
 
 :root {
@@ -42,9 +51,12 @@ header {
   padding: 28px 5vw 40px;
 }
 
-div {
-   display: flex;
+/* Antes existia "div { display: flex; justify-content: space-between; }"
+   sem classe/id nenhum, afetando toda div da página */
+#div {
+  display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 header h1 {
@@ -108,11 +120,6 @@ header h1 {
   visibility: hidden;
   transform: translateY(8px);
   transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
-/*
-  transform: translateY(8px);
-  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
-  
-  Escurece o fundo do menu suspenso e adiciona uma sombra para destacá-lo */
   z-index: 200;
   display: flex;
   flex-direction: column;
@@ -122,13 +129,6 @@ header h1 {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
-  /*
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-  
-  Levanta o a interface do menu quando o usuário passa o mouse por cima
-  */
 }
 
 .user-dropdown a {
@@ -264,7 +264,8 @@ footer h4 {
   color: var(--preto);
 }
 
-/* listas de produto dentro das páginas masculino.html / feminino.html */
+/* listas de produto dentro das páginas masculino.html / feminino.html
+   (mantido caso ainda seja usado em outra página) */
 ol {
   list-style: none;
   display: grid;
@@ -305,7 +306,7 @@ ol img:hover {
 }
 
 ol br {
-  display: none; /* o grid já cuida do espaçamento */
+  display: none;
 }
 
 /* ---------- Rodapé (rodape.html) ---------- */
