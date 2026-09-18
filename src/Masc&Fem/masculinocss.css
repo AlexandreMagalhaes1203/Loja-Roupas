@@ -51,12 +51,17 @@ h4 {
 
 .Carrossel.Masculino {
     background-color: var(--preto);
-    max-width: 1200px;
-    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 16px;
     padding: 24px 5vw;
+    /* ocupa a largura toda da tela */
 }
 
 .Rolamento.Masculino {
+    flex: 1 1 auto;
+    min-width: 0;
+    /* permite a faixa encolher e ativar o scroll, em vez de estourar o flex */
     display: flex;
     gap: 12px;
     overflow-x: auto;
@@ -70,11 +75,17 @@ h4 {
 }
 
 .Rolamento.Masculino>div {
-    position: relative;
     flex: 0 0 220px;
     scroll-snap-align: start;
     display: flex;
     flex-direction: column;
+    transition: transform 0.3s ease;
+    transform: scale(1);
+}
+
+.Rolamento.Masculino>div.ativo {
+    transform: scale(1.15);
+    z-index: 2;
 }
 
 .Rolamento.Masculino img {
@@ -107,30 +118,18 @@ h4 {
     color: var(--preto);
 }
 
-/* Setas: coladas na imagem do primeiro/último card */
 
 .Seta {
-    position: absolute;
-    top: 38%;
-    transform: translateY(-50%);
+    flex: 0 0 auto;
     width: 32px;
     height: 32px;
     border: none;
     border-radius: 50%;
     background-color: var(--branco);
     cursor: pointer;
-    z-index: 2;
     transition: background-color 0.25s ease;
 }
 
 .Seta:hover {
     background-color: var(--dourado);
-}
-
-.esquerda {
-    left: 10px;
-}
-
-.direita {
-    right: 10px;
 }

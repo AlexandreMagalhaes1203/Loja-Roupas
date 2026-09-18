@@ -2,7 +2,6 @@
    Loja de Roupas — tema inspirado na Outlet360
    ========================================================== */
 
-
 /*
    {
 border :outline 2px solid magenta
@@ -51,8 +50,6 @@ header {
   padding: 28px 5vw 40px;
 }
 
-/* Antes existia "div { display: flex; justify-content: space-between; }"
-   sem classe/id nenhum, afetando toda div da página */
 #div {
   display: flex;
   justify-content: space-between;
@@ -252,101 +249,10 @@ section {
   background-color: var(--branco);
 }
 
-section h4,
-footer h4 {
-  font-family: var(--fonte-titulo);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 24px;
-  text-align: center;
-  padding: 28px 0 8px;
-  margin: 0;
-  color: var(--preto);
-}
-
-/* listas de produto dentro das páginas masculino.html / feminino.html
-   (mantido caso ainda seja usado em outra página) */
-ol {
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 18px;
-  padding: 12px 5vw 28px;
-  margin: 0;
-  counter-reset: item;
-}
-
-ol li {
-  font-family: var(--fonte-titulo);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 13px;
-  text-align: center;
-  color: var(--preto);
-  border-top: 1px solid var(--cinza-claro);
-  padding-top: 8px;
-}
-
-ol li a:hover {
-  color: var(--dourado);
-}
-
-ol img {
-  width: 100%;
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
-  border: 1px solid var(--cinza-claro);
-  filter: grayscale(15%);
-  transition: filter 0.25s ease, transform 0.25s ease;
-}
-
-ol img:hover {
-  filter: grayscale(0%);
-  transform: scale(1.02);
-}
-
-ol br {
-  display: none;
-}
-
 /* ---------- Rodapé (rodape.html) ---------- */
 
 footer {
   background-color: var(--preto);
-  color: var(--branco);
-}
-
-footer h4 {
-  color: var(--branco);
-}
-
-footer ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-  padding: 0 0 12px;
-  margin: 0;
-  flex-wrap: wrap;
-}
-
-footer ul li a {
-  font-family: var(--fonte-titulo);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 13px;
-  color: var(--cinza-claro);
-}
-
-footer ul li a:hover {
-  color: var(--dourado);
-}
-
-footer p {
-  text-align: center;
-  font-size: 13px;
-  color: var(--cinza);
-  margin: 6px 0;
 }
 
 /* ---------- Responsivo ---------- */
